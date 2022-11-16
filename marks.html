@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Marks</title>
+    <link rel="stylesheet"href="style1.css">
+</head>
+<body>
+    <div id="main">
+        <div id="head"><h1>Grading System</h1></div>
+
+        <label>English:</label><input type="text"id="eng"><br>
+        <label>Mathematics:</label><input type="text" id="math"><br>
+        <label>Kiswahili:</label><input type="text" id="kisw"><br>
+        <label>Religion:</label><input type="text" id="rel"><br>
+        <label>Science:</label><input type="text" id="sci"><br>
+        <hr>
+        <button class="btn1" onclick="total()">TOTAL</button>
+        <button class="btn2" onclick="average()">AVERAGE</button>
+        <button class="btn3"onclick="grade()">GRADE</button>
+    </div>
+
+    <div id="result">
+        <div id="head1"><h1>Total</h1></div>
+        <div id="total">
+
+        </div>
+        <div id="head2"><h1>Average</h1></div>
+        <div id="average">
+
+        </div>
+        <div id="head3"><h1>Grade</h1></div>
+        <div id="grade">
+
+        </div>
+    
+    </div>
+    <script>
+        function total(){
+            var sub1=parseInt(document.getElementById("eng").value);
+            var sub2=parseInt(document.getElementById("math").value);
+            var sub3=parseInt(document.getElementById("kisw").value);
+            var sub4=parseInt(document.getElementById("rel").value);
+            var sub5=parseInt(document.getElementById("sci").value);
+
+            if(sub1>100|| sub2>100|| sub3>100|| sub4>100|| sub5>100){
+                alert("Please Enter A Value In Required Range")
+            }
+            else{
+                var total=sub1+sub2+sub3+sub4+sub5;
+                document.getElementById("total").innerHTML="English Marks:"+sub2+"<br>Mathematics Marks:"+sub3+"<br> Kiswahili Marks:"+sub4+
+                "<br> Religious Marks:"+sub5+"<br>Science Marks:"+sub1+"<br>           <br>Total Marks"+total;
+
+            }
+        }
+        function average(){
+            var sub1=parseInt(document.getElementById("eng").value);
+            var sub2=parseInt(document.getElementById("math").value);
+            var sub3=parseInt(document.getElementById("kisw").value);
+            var sub4=parseInt(document.getElementById("rel").value);
+            var sub5=parseInt(document.getElementById("sci").value);
+
+            if(sub1>100|| sub2>100|| sub3>100|| sub4>100|| sub5>100){
+                alert("Please Enter A Value In Required Range")
+            }
+            else{
+                var total=sub1+sub2+sub3+sub4+sub5;
+                var average=total/5;
+                document.getElementById("average").innerHTML="Your Average Marks"+average;
+            }
+        }
+        function grade(){
+            var sub1=parseInt(document.getElementById("eng").value);
+            var sub2=parseInt(document.getElementById("math").value);
+            var sub3=parseInt(document.getElementById("kisw").value);
+            var sub4=parseInt(document.getElementById("rel").value);
+            var sub5=parseInt(document.getElementById("sci").value);
+
+            if(sub1>100|| sub2>100|| sub3>100|| sub4>100|| sub5>100){
+                alert("Please Enter A Value In Required Range")
+            }
+            else{
+                var total=sub1+sub2+sub3+sub4+sub5;
+                var average=total/5;
+
+            if(average>=80 && average<=100){
+                document.getElementById("grade").innerHTML="Your Grade is A"
+            }
+            else if(average>=75 && average<=80){
+                document.getElementById("grade").innerHTML="Your Grade is B+"
+            }
+            else if(average>=70 && average<=75){
+                document.getElementById("grade").innerHTML="Your Grade is B"
+            }
+            else if(average>=60 && average<=70){
+                document.getElementById("grade").innerHTML="Your Grade is C"
+            }
+            else if(average>=55 && average<=60){
+                document.getElementById("grade").innerHTML="Your Grade is D"
+            }
+            else if(average>=50 && average<=55){
+                document.getElementById("grade").innerHTML="Your Grade is D+"
+            }
+            else {
+                document.getElementById("grade").innerHTML="Your Grade is F"
+            }
+        }
+
+    }
+        
+
+        
+    </script>
+</body>
+</html>
