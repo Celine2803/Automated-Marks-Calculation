@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Oswald:wght@200;400&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500&family=Xanh+Mono:ital@0;1&display=swap');
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
 }
 body{
     background:url(./58757a184bfd4eb19a20e94d84b584be.jpg) ;
@@ -36,8 +38,8 @@ body{
 }
 
 .btn1{
-    outline:none;
-    border:none;
+   /*outline:none;*/
+    border-radius:12px;
     width:7px;
     height:7px;
     margin-right:90px;
@@ -46,8 +48,8 @@ body{
     background-color: #bf3040;   
 }
 .btn2{
-    outline:none;
-    border:none;
+    /* outline:none; */
+    border-radius:12px;
     width:7px;
     height:7px;
     font-size:22px;
@@ -56,8 +58,8 @@ body{
     margin-top:50px;
 }
 .btn3{
-    outline:none;
-    border:none;
+    /* outline:none; */
+    border-radius:12px;
     width:7px;
     height:7px;
     background-color:#bf3040;
@@ -75,32 +77,33 @@ body{
 }
 #head1,#head2,#head3{
     background-color: black;
-    width: 110px;
+    width: 140px;
     height:45px;
     color:white;
     text-align:center;
 }
 #total{
-    height:180px;
-    width:110px;
+    height:280px;
+    width:140px;
     padding:20px;
     background-color: white;
-    font-size:12px;
+    font-size:13px;
     font-weight:600;
+    word-spacing:30px;
 }
 #grade{
-    height:20px;
-    width:100%;
+    height:6s0px;
+    width:140px;
     padding:20px;
-    font-size:12px;
+    font-size:13px;
     font-weight: 600;
     background-color: white;
 }
 #average{
     height:80px;
-    width:100%;
+    width:140px;
     padding:20px;
-    font-size:12px;
+    font-size:13px;
     font-weight:600;
     background-color:white;
 }
